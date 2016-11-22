@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style> 
+  .navbar-header {
+  background: transparent;
+  }
+  .navbar-brand {
+  color: #fff;
+  }
+  .profile_image{
+  position: relative;
+  text-align: center;
+  width: 1920px;
+  height: 1080px;
+  z-index: -1;
+  }
+  .button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: 30px;
+  }
+  </style>
+  </head>
+  <body>
+  <div class="container">
+  <div class="navbar-header">
+  <a class="navbar-brand" href="#">Sarika's Birthday</a>
+  </div>
+  <div class="profile_image" style="background-image:url('./images/profile_pic.jpg'); background-repeat: no-repeat; background-size: contain;">
+  </div>
+  <form id="uploadForm" enctype="multipart/form-data" action="/uploadImage" method="post">
+  <input type="file" multiple="multiple" name="userPhoto"/>
+  <button type="submit">Click here</button>
+  </form>
+   </div>
+  </body>
+</html>
