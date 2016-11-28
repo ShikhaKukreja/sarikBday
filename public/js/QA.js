@@ -9,7 +9,7 @@ app.controller('reviewDisplayController', function($scope,$http)
 	};
 	$scope.questions=[
 	                  {
-	                	  'question': 'What is the coolest thing about her ?',
+	                	  'question': 'Is sarika single according to you?',
 	                	  'choices':[{
 	                		  'name': 'group1',
 	                		  'id': 1,
@@ -25,7 +25,7 @@ app.controller('reviewDisplayController', function($scope,$http)
 	                	  {
 	                		  'name': 'group1',
 	                		  'id': 3,
-	                		  'text': 'No, not sure',
+	                		  'text': 'No',
 	                		  'isUserAnswer': false
 	                	  }
 	                	  ] 
@@ -35,19 +35,19 @@ app.controller('reviewDisplayController', function($scope,$http)
 	                	  'choices':[{
 	                		  'name': 'group2',
 	                		  'id': 2,
-	                		  'text': 'Yes, ofcourse!',
+	                		  'text': 'Yes she is good at almost everything',
 	                		  'isUserAnswer': false
 	                	  },
 	                	  {
 	                		  'name': 'group2',
 	                		  'id': 2,
-	                		  'text': 'May be',
+	                		  'text': 'Sorry. No comments',
 	                		  'isUserAnswer': true
 	                	  },
 	                	  {
 	                		  'name': 'group2',
 	                		  'id': 3,
-	                		  'text': 'No, not sure',
+	                		  'text': 'No, I dont think so',
 	                		  'isUserAnswer': false
 	                	  }
 	                	  ]  
@@ -94,8 +94,24 @@ app.controller('reviewDisplayController', function($scope,$http)
 		}];
 	};
 	$scope.RadioChange = function(s){
-		$scope.GenderSelected = s;
-		console.log(s);
+		if(s.question[0]=='Yes, ofcourse!')
+			$scope.msg = 'Hahaha...Really? Then go get one for her';
+		else if(s.question[0]=='May be')
+			$scope.msg = 'I think you dont know her that well';
+		else if(s.question[0]=='No')
+			$scope.msg = 'Hmmmm...Even I think so and its me who she is dating :p';
+		if(s.question[1]=='Yes she is good at almost everything')
+			$scope.msg = 'Sarika has bribed me';
+		else if(s.question[1]=='Sorry. No comments')
+			$scope.msg = 'Come on! Stop being diplomatic. Sarika does not like diplomacy';
+		else if(s.question[1]=='No, I dont think so')
+			$scope.msg = 'Atleast you have the courage to speak your mind';
+		if(s.question[2]=='I have virgin lips')
+			$scope.msg = 'None of these statements is true :p';
+		else if(s.question[2]=='I am a woman of words')
+			$scope.msg = 'None of these statements is true :p';
+		else if(s.question[2]=='I am the most mature person in the house')
+			$scope.msg= 'None of these statements is true :p';
 	};
 	$scope.toggleActive=function(item)
     {
