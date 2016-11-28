@@ -156,43 +156,16 @@
             </div>
         <div class="row text-center" >
             <div class="col-md-12 g-pad-bottom" >
-                <div class="col-md-3 col-sm-3 col-xs-6">
+                <div class="col-md-4 col-sm-4 col-xs-6">
+					</div>
+                 <div class="col-md-4 col-sm-4 col-xs-6">
 						<div class="team-member">
 							<img src="assets/img/team.png" alt="">
-                            <h3> <strong> ANDREW ALEX </strong>
+                            <h3> <strong> SHIKHA KUKREJA </strong>
                                 <br /><br />
 						UI Designer</h3>
 						</div>
-					</div>
-                 <div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="team-member">
-							<img src="assets/img/team.png" alt="">
-                            <h3> <strong> ANDREW ALEX </strong>
-                                <br /><br />
-						UI Designer</h3>
-						</div>
-					</div>
-                 <div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="team-member">
-							<img src="assets/img/team.png" alt="">
-                            <h3> <strong> ANDREW ALEX </strong>
-                                <br /><br />
-						UI Designer</h3>
-						</div>
-					</div>
-                 <div class="col-md-3 col-sm-3 col-xs-6">
-						<div class="team-member">
-							<img src="assets/img/team.png" alt="">
-                            <h3> <strong> ANDREW ALEX </strong>
-                                <br /><br />
-						UI Designer</h3>
-						</div>
-					</div>
-					
-					
-					
-					
-					
+					</div> 
             </div>
         </div>
         <div class="row text-center" >
@@ -278,16 +251,17 @@
     	<li ng-repeat="question in questions">
     	{{question.question}}
     			<div data-ng-repeat="item in question.choices">
-    			<input type="radio" name="{{item.name}}" ng-model="model.question[$parent.$index]" value="{{item.text}}" ng-click="RadioChange(name)"/>
+    			<input id="{{item.id}}" type="radio" name="{{item.name}}" ng-model="model.question[$parent.$index]" value="{{item.text}}" ng-click="RadioChange(model)"/>
   {{item.text}} &nbsp; &nbsp;
   </div>
   </li>
   </ul>
   <input type="button" value="Submit" ng-click="submitForm()"> 
   </form>
-  <div ng-if="{{model.question[0]}}== Yes, ofcourse!">
-  <p>{{model.question}}
-  </div>
+  
+  {{msg}}
+ 
+  
   <!-- <div ng-if="{{GenderSelected}} == 'Yes, ofcourse!'">
   </div> -->
     	</div>
