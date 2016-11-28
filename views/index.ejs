@@ -251,17 +251,14 @@
     	<li ng-repeat="question in questions">
     	{{question.question}}
     			<div data-ng-repeat="item in question.choices">
-    			<input id="{{item.id}}" type="radio" name="{{item.name}}" ng-model="model.question[$parent.$index]" value="{{item.text}}" ng-click="RadioChange(model)"/>
+    			<input id="{{item.id}}" type="radio" name="{{item.name}}" ng-model="model.question[$parent.$index]" value="{{item.text}}" ng-change="RadioChange(model.question[$parent.$index])"/>
   {{item.text}} &nbsp; &nbsp;
   </div>
   </li>
   </ul>
   <input type="button" value="Submit" ng-click="submitForm()"> 
   </form>
-  
   {{msg}}
- 
-  
   <!-- <div ng-if="{{GenderSelected}} == 'Yes, ofcourse!'">
   </div> -->
     	</div>
