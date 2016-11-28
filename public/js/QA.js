@@ -4,6 +4,7 @@
 var app = angular.module('myApp', []);
 app.controller('reviewDisplayController', function($scope,$http)
     	{
+	$scope.counter=0;
 	$scope.model = {
 			question: []
 	};
@@ -94,23 +95,27 @@ app.controller('reviewDisplayController', function($scope,$http)
 		}];
 	};
 	$scope.RadioChange = function(s){
-		if(s.question[0]=='Yes, ofcourse!')
+		
+		$scope.counter++;
+		console.log($scope.counter);
+		console.log(s);
+		if(s=='Yes, ofcourse!')
 			$scope.msg = 'Hahaha...Really? Then go get one for her';
-		else if(s.question[0]=='May be')
+		else if(s=='May be')
 			$scope.msg = 'I think you dont know her that well';
-		else if(s.question[0]=='No')
+		else if(s=='No')
 			$scope.msg = 'Hmmmm...Even I think so and its me who she is dating :p';
-		if(s.question[1]=='Yes she is good at almost everything')
+		if(s=='Yes she is good at almost everything')
 			$scope.msg = 'Sarika has bribed me';
-		else if(s.question[1]=='Sorry. No comments')
+		else if(s=='Sorry. No comments')
 			$scope.msg = 'Come on! Stop being diplomatic. Sarika does not like diplomacy';
-		else if(s.question[1]=='No, I dont think so')
+		else if(s=='No, I dont think so')
 			$scope.msg = 'Atleast you have the courage to speak your mind';
-		if(s.question[2]=='I have virgin lips')
+		if(s=='I have virgin lips')
 			$scope.msg = 'None of these statements is true :p';
-		else if(s.question[2]=='I am a woman of words')
+		else if(s=='I am a woman of words')
 			$scope.msg = 'None of these statements is true :p';
-		else if(s.question[2]=='I am the most mature person in the house')
+		else if(s=='I am the most mature person in the house')
 			$scope.msg= 'None of these statements is true :p';
 	};
 	$scope.toggleActive=function(item)
