@@ -1,10 +1,13 @@
 /**
  * http://usejsdoc.org/
  */
-var app = angular.module('myApp', []);
-app.controller('reviewDisplayController', function($scope,$http)
+var app = angular.module('myApp', ['zingchart-angularjs']);
+app.controller('reviewDisplayController', function($scope,$http,$interval)
     	{
-	$scope.counter=0;
+	$scope.myData = [1,4,5,5,10];
+	$interval(function(){  
+        $scope.myData.push(Math.random() * 10);  
+    }, 1000); 
 	$scope.model = {
 			question: []
 	};
@@ -95,9 +98,6 @@ app.controller('reviewDisplayController', function($scope,$http)
 		}];
 	};
 	$scope.RadioChange = function(s){
-		
-		$scope.counter++;
-		console.log($scope.counter);
 		console.log(s);
 		if(s=='Yes, ofcourse!')
 			$scope.msg = 'Hahaha...Really? Then go get one for her';
