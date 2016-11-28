@@ -57,10 +57,45 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.post('/uploadImage',users.uploadImage);
+app.post('/getGraph', function(req,res){
+	console.log(req);
+	client.query("SELECT * from `quiz`",function(err,result){
+		console.log(err);
+		console.log(result);
+	var Q1 = [];
+	var Q2 = [];
+	var Q3 = [];
+	 for(var i = 0; i < result.length; i++) {
+			 if(result[i].Q1=='May be')
+				 Q1[i]=1;
+			 else if(result[i].Q1=='Yes, ofcourse!')
+				 Q1[i]=2;
+			 else if(result[i].Q1=='No')
+				 Q1[i]=0;
+			 if(result[i].Q2=='Sorry. No comments')
+				 Q2[i]=1;
+			 else if(result[i].Q2=='Yes she is good at almost everything')
+				 Q2[i]=2;
+			 else if(result[i].Q2=='No, I dont think so')
+				 Q2[i]=0;
+			 if(result[i].Q3=='I have virgin lips')
+				 Q3[i]=2;
+			 else if(result[i].Q3=='I am a woman of words')
+				 Q3[i]=2;
+			 else if(result[i].Q3=='I am the most mature person in the house')
+				 Q3[i]=2;
+		    /*Q1[i] = result[i].Q1;
+		    Q2[i] = result[i].Q2;
+		    Q3[i] = result[i].Q3;*/
+		  }
+	 jsonArray = [Q1, Q2, Q3];
+	 console.log(jsonArray);
+	 res.render('index', {jsonArray:jsonArray});
+	});
+});
 app.post('/postFormAngular',function(req,res){
 	client.query("INSERT INTO `quiz` (`Q1`,`Q2`,`Q3`) VALUES('"+req.body.question[0]+"','"+req.body.question[1]+"','"+req.body.question[2]+"');",function(err,result){
 		if(err) throw err;
-		client.end();
 	});
 });
 http.createServer(app).listen(app.get('port'), function(){
