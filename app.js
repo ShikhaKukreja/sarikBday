@@ -8,20 +8,12 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , fs = require('fs')
-  , session=require('client-sessions')
   , multer = require('multer')
   , users = require('./routes/users')
   , mysql = require('mysql');
 var bodyParser = require('body-parser');
 
 var app = express();
-
-app.use(session({
-	cookieName: 'session',
-	secret: 'sessions_example',
-	duration: 30*60*1000,
-	activeduration: 5*60*1000,
-}));
 app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({extended: false}));
 
