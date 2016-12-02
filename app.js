@@ -28,7 +28,9 @@ app.use(express.methodOverride());
 app.use(express.bodyParser({keepExtensions: true, uploadDir: __dirname+'/public/uploadImages'}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '\public')));
-var client = mysql.createConnection({
+var client;
+function handleDisconnect(){
+	client=mysql.createConnection({
 	host: 'us-cdbr-iron-east-04.cleardb.net',
 	user: 'b53bc3a4b6a5c7',
 	port: '3306',
@@ -38,10 +40,19 @@ var client = mysql.createConnection({
 client.connect(function(err){
 	if(err) {
 		console.error('Error connecting: '+err.stack);
-		return;
+		setTimeout(handleDisconnect, 2000);
 	}
 	console.log('Connected!!');
 });
+client.on('error', function(err) {
+    console.log('db error', err);
+    if(err.code === 'PROTOCOL_CONNECTION_LOST') { // Connection to the MySQL server is usually
+      handleDisconnect();                         // lost due to either server restart, or a
+    } else {                                      // connnection idle timeout (the wait_timeout
+      throw err;                                  // server variable configures this)
+    }
+  });
+handleDisconnect();
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
