@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "test",
   "main": "app.js",
+   "engines": {
+    "node": "5.9.1"
+  },
   "dependencies": {
     "check-node-version": "^1.1.2",
     "multer": "^1.2.0",
