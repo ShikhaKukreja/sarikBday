@@ -29,11 +29,11 @@ app.use(express.bodyParser({keepExtensions: true, uploadDir: __dirname+'/public/
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '\public')));
 var client = mysql.createConnection({
-	host: '127.0.0.1',
-	user: 'root',
+	host: 'us-cdbr-iron-east-04.cleardb.net',
+	user: 'b53bc3a4b6a5c7',
 	port: '3306',
-	password: 'root',
-	database: 'sbday'
+	password: '4efd8ad8',
+	database: 'heroku_06118d7d12d95fa'
 });
 client.connect(function(err){
 	if(err) {
@@ -93,4 +93,3 @@ app.post('/postFormAngular',function(req,res){
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
-module.exports = app;
