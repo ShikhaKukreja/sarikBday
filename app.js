@@ -61,16 +61,16 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.post('/uploadImage',upload.single('file'),function(req,res){
-	 var file = __dirname + '/' + req.file.filename;
-	 fs.rename(req.file.path, file, function(err) {
+app.post('/uploadImage',upload.single('userPhoto'),function(req,res){
+	 var file = __dirname + '/' + req.files.userPhoto.name;
+	 fs.writefile(req.files.userPhoto.path, file, function(err) {
 		    if (err) {
 		      console.log(err);
 		      res.send(500);
 		    } else {
 		      res.json({
 		        message: 'File uploaded successfully',
-		        filename: req.file.filename
+		        filename: req.files.userPhoto.name
 		      });
 		    }
 		  });
