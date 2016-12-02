@@ -29,7 +29,6 @@ app.use(express.bodyParser({keepExtensions: true, uploadDir: __dirname+'/public/
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '\public')));
 var client;
-var upload = multer({ dest: '/tmp/'});
 function handleDisconnect(){
 	client=mysql.createConnection({
 	host: 'us-cdbr-iron-east-04.cleardb.net',
@@ -61,20 +60,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.post('/uploadImage',upload.single('userPhoto'),function(req,res){
-	 var file = __dirname + '/' + req.files.userPhoto.name;
-	 fs.writefile(req.files.userPhoto.path, file, function(err) {
-		    if (err) {
-		      console.log(err);
-		      res.send(500);
-		    } else {
-		      res.json({
-		        message: 'File uploaded successfully',
-		        filename: req.files.userPhoto.name
-		      });
-		    }
-		  });
-});
+app.post('/uploadImage',users.uploadImage);
 app.post('/getGraph', function(req,res){
 	console.log(req);
 	client.query("SELECT * from `quiz`",function(err,result){
