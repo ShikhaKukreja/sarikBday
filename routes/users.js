@@ -13,7 +13,7 @@ exports.uploadImage = function(req,res){
 	upload(req,res,function(err){
 		console.log(req.files.userPhoto.path);
 		fs.readFile(req.files.userPhoto.path, function(err,data){
-            var newPath = "./public/uploadImages/"+req.files.userPhoto.name;
+            var newPath = "/uploadImages/"+req.files.userPhoto.name;
 			//var newPath = "C:/Users/shikh/workspace/sbday/public/uploadImages/"+ req.files.userPhoto.name;
             console.log(newPath);
             fs.writeFile(newPath, data, function(err){
