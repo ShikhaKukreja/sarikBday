@@ -1,0 +1,122 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\shikh\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'cache',
+1 verbose cli   'clean',
+1 verbose cli   '-f' ]
+2 info using npm@4.0.3
+3 info using node@v6.9.1
+4 warn using --force I sure hope you know what you are doing.
+5 silly ls normalized .
+6 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\_locks is being purged
+7 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\_locks
+8 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\append-field is being purged
+9 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\append-field
+10 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\busboy is being purged
+11 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\busboy
+12 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\concat-stream is being purged
+13 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\concat-stream
+14 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\dicer is being purged
+15 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\dicer
+16 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\express-formidable is being purged
+17 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\express-formidable
+18 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\formidable is being purged
+19 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\formidable
+20 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\isarray is being purged
+21 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\isarray
+22 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\minimist is being purged
+23 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\minimist
+24 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\mkdirp is being purged
+25 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\mkdirp
+26 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\multer is being purged
+27 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\multer
+28 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\object-assign is being purged
+29 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\object-assign
+30 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\process-nextick-args is being purged
+31 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\process-nextick-args
+32 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\readable-stream is being purged
+33 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\readable-stream
+34 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\registry.npmjs.org is being purged
+35 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\registry.npmjs.org
+36 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\streamsearch is being purged
+37 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\streamsearch
+38 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\typedarray is being purged
+39 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\typedarray
+40 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\util-deprecate is being purged
+41 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\util-deprecate
+42 silly gentlyRm C:\Users\shikh\AppData\Roaming\npm-cache\xtend is being purged
+43 verbose gentlyRm don't care about contents; nuking C:\Users\shikh\AppData\Roaming\npm-cache\xtend
+44 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\_locks
+45 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\append-field
+46 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\concat-stream
+47 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\busboy
+48 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\express-formidable
+49 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\isarray
+50 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\formidable
+51 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\dicer
+52 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\object-assign
+53 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\minimist
+54 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\multer
+55 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\mkdirp
+56 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\process-nextick-args
+57 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\registry.npmjs.org
+58 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\readable-stream
+59 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\streamsearch
+60 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\util-deprecate
+61 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\typedarray
+62 silly vacuum-fs purging C:\Users\shikh\AppData\Roaming\npm-cache\xtend
+63 silly vacuum-fs quitting because other entries in C:\Users\shikh\AppData\Roaming\npm-cache
+64 silly vacuum-fs quitting because other entries in C:\Users\shikh\AppData\Roaming\npm-cache
+65 silly vacuum-fs quitting because other entries in C:\Users\shikh\AppData\Roaming\npm-cache
+66 silly vacuum-fs quitting because other entries in C:\Users\shikh\AppData\Roaming\npm-cache
+67 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+68 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+69 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+70 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+71 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+72 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+73 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+74 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+75 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+76 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+77 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+78 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+79 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+80 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+81 silly vacuum-fs removing C:\Users\shikh\AppData\Roaming\npm-cache
+82 silly vacuum-fs unable to remove C:\Users\shikh\AppData\Roaming\npm-cache due to EPERM: operation not permitted, rmdir 'C:\Users\shikh\AppData\Roaming\npm-cache'
+83 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+84 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+85 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+86 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+87 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+88 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+89 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+90 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+91 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+92 silly vacuum-fs quitting because lost the race to remove C:\Users\shikh\AppData\Roaming\npm-cache
+93 silly vacuum-fs quitting because other entries in C:\Users\shikh\AppData\Roaming
+94 silly vacuum-fs quitting because other entries in C:\Users\shikh\AppData\Roaming
+95 silly vacuum-fs quitting because other entries in C:\Users\shikh\AppData\Roaming
+96 silly vacuum-fs quitting because other entries in C:\Users\shikh\AppData\Roaming
+97 verbose stack Error: EPERM: operation not permitted, rmdir 'C:\Users\shikh\AppData\Roaming\npm-cache'
+97 verbose stack     at Error (native)
+98 verbose cwd C:\Users\shikh\workspace\sbday
+99 error Windows_NT 10.0.14393
+100 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\shikh\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "cache" "clean" "-f"
+101 error node v6.9.1
+102 error npm  v4.0.3
+103 error path C:\Users\shikh\AppData\Roaming\npm-cache
+104 error code EPERM
+105 error errno -4048
+106 error syscall rmdir
+107 error Error: EPERM: operation not permitted, rmdir 'C:\Users\shikh\AppData\Roaming\npm-cache'
+107 error     at Error (native)
+107 error  { Error: EPERM: operation not permitted, rmdir 'C:\Users\shikh\AppData\Roaming\npm-cache'
+107 error     at Error (native)
+107 error   errno: -4048,
+107 error   code: 'EPERM',
+107 error   syscall: 'rmdir',
+107 error   path: 'C:\\Users\\shikh\\AppData\\Roaming\\npm-cache' }
+108 error Please try running this command again as root/Administrator.
+109 verbose exit [ -4048, true ]

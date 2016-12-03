@@ -20,8 +20,12 @@ exports.uploadImage = function(req,res){
             	if(err){
             		return res.end("Error uploading file.");
             	}
-            	res.render('index');
-            	res.end("File is uploaded");
+            	var Q1 = [];
+            	var Q2 = [];
+            	var Q3 = [];
+            	var jsonArrayValue = [Q1, Q2, Q3];
+            	res.render('index',{ title: 'Profile Page' , jsonArray:jsonArrayValue});
+            	//res.end("File is uploaded");
             })
 		});
 	});

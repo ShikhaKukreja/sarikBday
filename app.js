@@ -31,11 +31,11 @@ app.use(express.static(path.join(__dirname, '\public')));
 var client;
 function handleDisconnect(){
 	client=mysql.createConnection({
-	host: 'us-cdbr-iron-east-04.cleardb.net',
-	user: 'b53bc3a4b6a5c7',
+	host: '127.0.0.1',
+	user: 'root',
 	port: '3306',
-	password: '4efd8ad8',
-	database: 'heroku_06118d7d12d95fa'
+	password: 'root',
+	database: 'sbday'
 });
 client.connect(function(err){
 	if(err) {

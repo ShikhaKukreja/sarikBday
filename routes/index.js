@@ -1,5 +1,5 @@
 
 	
 	exports.index = function(req, res){
-		  res.render('index', { title: 'Express' , jsonArray:''});
+		  res.render('index', { title: 'Profile Page' , jsonArray:''});
 		};
