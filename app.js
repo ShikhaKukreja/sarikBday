@@ -92,7 +92,7 @@ app.post('/getGraph', function(req,res){
 		    Q2[i] = result[i].Q2;
 		    Q3[i] = result[i].Q3;*/
 		  }
-	 jsonArray = [Q1, Q2, Q3];
+	 var jsonArray = [Q1, Q2, Q3];
 	 console.log(jsonArray);
 	 res.render('index', {jsonArray:jsonArray});
 	});
